@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <h1>Chi tiết sản phẩm</h1>
+            <a href="/" class="button-56" role="button">Quay lại danh sách</a>
+        </div>
+        <div style="padding:24px 0;">
+            <h2 style="margin-bottom:12px;">{{ product.name }}</h2>
+            <p><strong>Giá:</strong> ${{ "%.2f"|format(product.price) }}</p>
+        </div>
+        <div class="product-actions">
+            <a href="/edit/{{ product.id }}" class="button-56" role="button">Edit</a>
+            <a href="/delete/{{ product.id }}" class="button-56" role="button"
+               onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">Delete</a>
+        </div>
+    </div>
+</body>
+</html>

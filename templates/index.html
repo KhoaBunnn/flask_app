@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <h1>Danh sách sản phẩm</h1>
+            <h2 href="/add" class="button-56" role="button">Add Product</h2>
+        </div>
+        <div class="stats-bar">
+            <span>Tổng số sản phẩm: <strong>{{ products|length }}</strong></span>
+        </div>
+        <ul>
+            {% if products %}
+                {% for p in products %}
+                    <li>
+                        <div class="product-info">
+                            <strong>{{ p.name }}</strong><br>
+                            <span>Giá: ${{ "%.2f"|format(p.price) }}</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="/detail/{{ p.id }}" class="button-56" role="button">Chi tiết</a>
+                            <a href="/edit/{{ p.id }}" class="button-56" role="button">Edit</a>
+                            <a href="/delete/{{ p.id }}" class="button-56" role="button"
+                               onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">Delete</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li>
+                    <div class="product-info">Chưa có sản phẩm nào.</div>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</body>
+</html>
