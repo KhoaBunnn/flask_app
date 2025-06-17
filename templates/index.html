@@ -22,10 +22,11 @@
                             <span>Giá: ${{ "%.2f"|format(p.price) }}</span>
                         </div>
                         <div class="product-actions">
-                            <a href="/detail/{{ p.id }}" class="button-56" role="button">Chi tiết</a>
+                            <a href="/detail/{{ p.id }}" class="button-56" role="button">Detail</a>
                             <a href="/edit/{{ p.id }}" class="button-56" role="button">Edit</a>
                             <a href="/delete/{{ p.id }}" class="button-56" role="button"
                                onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">Delete</a>
+                            <a href="/pay" class="button-56" role="button" target="_blank">Pay</a>
                         </div>
                     </li>
                 {% endfor %}

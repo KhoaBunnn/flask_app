@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container" style="text-align:center;max-width:400px;margin:48px auto;">
+        <h2>Quét mã QR để thanh toán</h2>
+        <img src="{{ url_for('static', filename='qrMB.jpg') }}" width="300" alt="QR Thanh toán">
+        <p>Vui lòng quét mã bằng app ngân hàng để chuyển khoản.</p>
+        <a href="/" class="button-56" role="button">Quay lại trang chủ</a>
+    </div>
+</body>
+</html>

@@ -1,21 +1,20 @@
 body {
-    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+    background: linear-gradient(135deg, #23243a 0%, #2a2d4d 100%);
     font-family: 'Segoe UI', Arial, sans-serif;
-    color: #222;
+    color: #e3e6f3;
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    background: rgba(255,255,255,0.97);
-    border-radius: 24px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 4px #fff inset;
-    max-width: 540px;
+    background: rgba(34, 36, 58, 0.98);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    max-width: 700px;
     margin: 48px auto 0 auto;
-    padding: 40px 32px 32px 32px;
-    backdrop-filter: blur(6px);
-    border: 1.5px solid rgba(255,255,255,0.18);
+    padding: 36px 32px 32px 32px;
+    border: 1.5px solid rgba(80,80,120,0.18);
 }
 
 .header-bar {
@@ -27,7 +26,7 @@ body {
 }
 
 .stats-bar {
-    background: #f7fafd;
+    background: #2d2f4d;
     border-radius: 12px;
     padding: 14px 0;
     margin-bottom: 24px;
@@ -37,15 +36,16 @@ body {
     display: flex;
     justify-content: center;
     gap: 32px;
+    color: #a7b3e4;
 }
 
 h1 {
-    color: #111;
+    color: #a7b3e4;
     margin: 0 0 12px 0;
     font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 ul {
@@ -55,25 +55,28 @@ ul {
 }
 
 li {
-    background: rgba(255,255,255,0.85);
+    background: rgba(44, 47, 77, 0.95);
     margin: 14px 0;
     padding: 18px 16px;
     border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(45,127,249,0.10), 0 1.5px 4px #fff inset;
+    box-shadow: 0 4px 16px rgba(45,127,249,0.10), 0 1.5px 4px #23243a inset;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, background 0.2s;
+    border: 1px solid #35365c;
 }
 
 li:hover {
-    box-shadow: 0 8px 24px rgba(45,127,249,0.18), 0 2px 8px #fff inset;
+    box-shadow: 0 8px 24px rgba(45,127,249,0.18), 0 2px 8px #23243a inset;
+    background: #31335a;
 }
 
 .product-info {
     text-align: left;
     flex: 1;
+    color: #e3e6f3;
 }
 
 .product-actions {
@@ -85,18 +88,19 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
     width: 100%;
     padding: 12px 14px;
     margin: 14px 0;
-    border: 1.5px solid #e0e7ef;
+    border: 1.5px solid #35365c;
     border-radius: 10px;
     font-size: 17px;
-    box-shadow: 0 2px 8px rgba(45,127,249,0.08), 0 1.5px 4px #fff inset;
-    background: #f7fafd;
+    background: #23243a;
+    color: #e3e6f3;
     transition: box-shadow 0.2s, border 0.2s;
 }
 
 input:focus {
     outline: none;
-    border: 1.5px solid #2d7ff9;
-    box-shadow: 0 0 0 2px #2d7ff9, 0 2px 8px rgba(45,127,249,0.08);
+    border: 1.5px solid #7c5cff;
+    box-shadow: 0 0 0 2px #7c5cff, 0 2px 8px rgba(45,127,249,0.08);
+    background: #23243a;
 }
 
 .form-group {
@@ -108,29 +112,30 @@ label {
     font-weight: 500;
     margin-bottom: 6px;
     display: block;
+    color: #a7b3e4;
 }
 
 a {
-    color: #2d7ff9;
+    color: #7c5cff;
     text-decoration: none;
     transition: color 0.2s;
     font-weight: 500;
 }
 
 a:hover {
-    color: #1a5fd7;
+    color: #a7b3e4;
 }
 
-/* Button 56 style */
 .button-56 {
- align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
+  align-items: center;
+  background-color: #2d2f4d;
+  border: 2px solid #7c5cff;
   border-radius: 8px;
   box-sizing: border-box;
-  color: #111;
+  color: #e3e6f3;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
+  align-items: center;                   
   font-family: Inter,sans-serif;
   font-size: 16px;
   height: 48px;
@@ -144,10 +149,15 @@ a:hover {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  font-weight: 600;
+  margin: 0 4px;
+  box-shadow: none;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+  z-index: 1;
 }
 
 .button-56:after {
-  background-color: #111;
+  background-color: #7c5cff;
   border-radius: 8px;
   content: "";
   display: block;
@@ -166,13 +176,15 @@ a:hover {
 }
 
 .button-56:active {
-  background-color: #f3f3f3;
+  background-color: #23243a;
   outline: 0;
 }
 
 .button-56:hover {
   outline: 0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  background: #7c5cff;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(124,92,255,0.15);
 }
 
 @media (min-width: 768px) {
